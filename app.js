@@ -29,6 +29,12 @@ app.use('/comments', commentsRoutes)
 app.use('/optional', optionalRoutes)
 app.use('/upload', uploadRoutes)
 
-
+//* TEST ROUTE *
+app.get('/', (req, res, next) => {
+  res.status(200).json({
+    status: 'Success',
+    message: 'Online'
+  })
+})
 
 module.exports = app
